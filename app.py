@@ -1,6 +1,8 @@
 import streamlit as st
 import twint
 import pandas as pd
+import nest_asyncio
+nest_asyncio.apply()
 
 
 q = st.text_input('Search tearm')
