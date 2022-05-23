@@ -28,6 +28,7 @@ if search:
 	if q is not None and q != '':
 		c.Search = q		
 
+	st.write("limit: {}, since: {}, until: {}, q: {}, username: {}".format(int(limit),str(from_date),str(to_date),q,username))
 	twint.run.Search(c)
 	df = twint.storage.panda.Tweets_df
 
