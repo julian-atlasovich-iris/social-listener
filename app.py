@@ -18,6 +18,7 @@ if search:
 	c.Pandas = True
 	c.Since = str(from_date) + ' 00:00:00'
 	c.Until = str(to_date) + ' 00:00:00'
+	c.Hide_output = True
 	#c.Lang = 'en'
 	#c.Custom = ['id','date', 'time', 'username', 'tweet']
 	#c.Filter_retweets = True
