@@ -37,10 +37,10 @@ if search:
 		st.write(df[['id','date','tweet','username']])
 		csv = df.to_csv(index=False).encode('utf-8')
 		st.download_button("Download",csv,"file.csv","text/csv",key='download-csv')
-		df['date_no_time'] = pd.to_datetime(df['date']).dt.strftime('%Y-%m-%d')
+		df['calendar_date'] = pd.to_datetime(df['date']).dt.strftime('%Y-%m-%d')
 		
-		st.line_chart(df['date_no_time'].value_counts())
-		st.write(df['date_no_time'].value_counts())
+		st.line_chart(df['calendar_date'].value_counts())
+		st.write(df['calendar_date'].value_counts())
 	else:
 		st.write('No results, or error')		
 
